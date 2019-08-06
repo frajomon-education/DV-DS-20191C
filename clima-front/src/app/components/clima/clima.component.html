@@ -1,0 +1,18 @@
+<div *ngIf="clima" style="width: 100%; text-align: center;">
+    <p class="text-muted" style="height: 1px; margin-top: 15px; margin-right: 60%;"><i class="fas fa-map-marker-alt"></i>  {{clima.ubicacion}}</p>
+    <img src="http://openweathermap.org/img/wn/{{clima.idIcono}}@2x.png" width="100px" height="100px" alt="{{clima.estado}}" style="margin-top: -20px;">
+    <div class="card-body" style="margin-top: -5px; height: 100%;">
+        <h5 class="card-title">{{clima.temperatura | number: '1.1-1'}}° {{clima.estado | titlecase}}</h5>
+        <table class="table" id="tablaClima">
+            <tr>
+                <td style="border-top-style: unset; color: cornflowerblue;">Min: {{clima.temperaturaMinima | number: '1.1-1'}}°</td>
+                <td style="border-top-style: unset; color: tomato;">Max: {{clima.temperaturaMaxima | number: '1.1-1'}}°</td>
+            </tr>
+            <tr>
+                <td>Presion: <strong>{{clima.presion}}hPa</strong></td>
+                <td>Humedad: <strong>{{clima.humedad}}%</strong></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<ngx-spinner  size="medium" [fullScreen]="false" type="ball-clip-rotate-multiple"></ngx-spinner> 

@@ -1,0 +1,13 @@
+<div *ngIf="chartDatasets" style="display: block; margin-top: 8%;">
+    <p style="margin-top: -5%; text-align: center; margin-bottom: -2px;">Estadisticas: 7 dias pasados</p>
+    <canvas mdbChart
+        [chartType]="chartType"
+        [datasets]="chartDatasets"
+        [labels]="chartLabels"
+        [colors]="chartColors"
+        [options]="chartOptions"
+        [legend]="true"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>

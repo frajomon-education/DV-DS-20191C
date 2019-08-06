@@ -1,0 +1,16 @@
+<div *ngFor="let clima of pronostico" class="card" style="height: 15%; margin-top: 5%;">
+    <div class="row" style="height: 100%">
+        <div class="col-2" style="height: 100%">
+            <img src="http://openweathermap.org/img/wn/{{clima.idIcono}}@2x.png" width="100px" height="100%" alt="{{clima.estado}}">
+        </div>
+        <div class="col-4" style="height: 100%; text-align: center; margin-top: 5px; font-size: small;">
+            <p><strong>{{getDiaSemana(clima.fecha)}}</strong></p>
+            <span><h6 class="card-title" style="margin-top: -3px;">{{clima.temperatura | number: '1.1-1'}}° {{clima.estado | titlecase}}</h6></span>
+        </div>
+        <div class="col-6" style="height: 100%; border-left-style: solid; border-left-width: 1px; border-left-color: darkgray;">
+            <p style="margin-top: 5%;">Presion: <strong>{{clima.presion}}hPa</strong></p>
+            <p>Humedad: <strong>{{clima.humedad}}%</strong></p>
+        </div>
+    </div>
+</div>
+<ngx-spinner name="pronostico" size="medium" [fullScreen]="false" type="ball-clip-rotate-multiple"></ngx-spinner>

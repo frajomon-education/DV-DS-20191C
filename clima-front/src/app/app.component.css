@@ -1,0 +1,23 @@
+#principal {
+    height: 600px;
+    width: 1000px;
+    margin-top: 2%;
+    box-shadow: 1px 5px 10px 5px darkgrey;
+
+}
+#rowPrincipal{
+    height: 100%;
+}
+#rowClima{
+    height: 300px;
+}
+#rowEstadisticas{
+    height: 300px;
+    background-color: whitesmoke;
+}
+#divPronostico{
+    background-color: cadetblue;
+    height: 100%;
+
+}
+
