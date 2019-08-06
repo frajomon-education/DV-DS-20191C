@@ -1,5 +1,5 @@
 # Clima
-App de consulta de clima para final de diseño de sistemas
+Api de consulta de clima para final de diseño de sistemas
 
 Java 1.8
 
